@@ -35,7 +35,7 @@ export class SignupComponent {
 
   private handleResponse(response: any): void{
     console.log(response.message);
-
+    this.router.navigateByUrl('/login');
   }
 
   private handleErrors(errors: any): void{
