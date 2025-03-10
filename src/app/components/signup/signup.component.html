@@ -1,1 +1,29 @@
-<p>signup works!</p>
+<section class="row py-5">
+    <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center my-4">Registro</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputName" formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputPassword" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="inputPassword" formControlName="password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputPasswordConfirmation" class="form-label">Confirmar Contraseña</label>
+                      <input type="password" class="form-control" id="inputPasswordConfirmation" formControlName="password_confirmation">
+                    </div>
+                    <button type="submit" class="btn btn-lg w-100 btn-primary mt-1 mb-4">Registrarse</button>
+                    <a routerLink="/login" class="d-block text-center mb-4">Ya tienes una cuenta? Inicia sesión</a>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>
