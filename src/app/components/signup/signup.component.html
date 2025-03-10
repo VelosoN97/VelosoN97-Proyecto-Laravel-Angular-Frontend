@@ -3,6 +3,15 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="text-center my-4">Registro</h2>
+                <div class="alert alert-danger" *ngIf="errors?.name">
+                    {{errors.name}}
+                </div>
+                <div class="alert alert-danger" *ngIf="errors?.email">
+                    {{errors.email}}
+                </div>
+                <div class="alert alert-danger" *ngIf="errors?.password">
+                    {{errors.password}}
+                </div>
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="mb-3">
                         <label for="inputName" class="form-label">Nombre</label>
